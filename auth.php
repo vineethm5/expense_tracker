@@ -9,14 +9,22 @@ if (isset($_POST['signup'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $password);
-    
-    if ($stmt->execute()) {
-        $success = "Account created! You can now log in.";
+    try 
+    {
+        $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $username, $email, $password);
+        
+        if ($stmt->execute()) {
+            $success = "Account created! You can now log in.";
+        } 
+    }
+    catch (mysqli_sql_exception $e) {
+    // Check if the error code is 1062 (Duplicate Entry)
+    if ($e->getCode() === 1062) {
+        $error = "This email is already registered. Please try logging in.";
     } else {
-        $error = "Registration failed. Email might already exist.";
+        $error = "Something went wrong. Please try again later.";
+    }
     }
 }
 
