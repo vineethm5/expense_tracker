@@ -23,7 +23,7 @@ if (isset($_POST['signup'])) {
     if ($e->getCode() === 1062) {
         $error = "This email is already registered. Please try logging in.";
     } else {
-        $error = "Something went wrong. Please try again later.";
+        $error   = "Something went wrong. Please try again later.";
     }
     }
 }
