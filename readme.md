@@ -1,3 +1,6 @@
+
+Tharunya For your reference
+
 CREATE DATABASE IF NOT EXISTS expense_tracker;
 USE expense_tracker;
 
@@ -19,3 +22,7 @@ CREATE TABLE expenses (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+
+
+--------------Vineeth
