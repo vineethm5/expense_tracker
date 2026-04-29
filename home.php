@@ -24,34 +24,33 @@
     </style>
 </head>
 <body class="bg-slate-950 text-white font-sans antialiased hero-gradient min-h-screen">
-
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="flex items-center gap-2.5 group cursor-pointer">
-            <div class="relative w-8 h-8 flex-shrink-0">
-                <div class="absolute inset-1 bg-gradient-to-tr from-indigo-600 to-indigo-400 rounded-md rotate-3 group-hover:rotate-6 transition-transform duration-300 opacity-80"></div>
-                <div class="relative w-8 h-8 bg-white rounded-md flex items-center justify-center border border-slate-200 shadow-sm">
-                    <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 7h12v3H6z" fill="#4338ca"/>
-                        <path d="M10 10h4v8h-4z" fill="#6366f1"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="flex flex-col leading-none">
-                <span class="text-lg font-black text-white tracking-tight uppercase">Track<span class="text-indigo-400">it</span></span>
-                <span class="text-[7px] font-bold text-slate-500 uppercase tracking-[0.4em] mt-0.5">Track you</span>
+	<nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+    <div class="flex items-center gap-2.5 group cursor-pointer">
+        <div class="relative w-8 h-8 flex-shrink-0">
+            <div class="absolute inset-1 bg-gradient-to-tr from-indigo-600 to-indigo-400 rounded-md rotate-3 opacity-80 group-hover:rotate-6 transition-transform"></div>
+            <div class="relative w-8 h-8 bg-white rounded-md flex items-center justify-center border border-slate-200">
+                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 7h12v3H6z" fill="#4338ca"/>
+                    <path d="M10 10h4v8h-4z" fill="#6366f1"/>
+                </svg>
             </div>
         </div>
-
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-           <!--  <a href="#" class="hover:text-indigo-400 transition">Solutions</a>
-            <a href="#" class="hover:text-indigo-400 transition">Features</a>
-            <a href="#" class="hover:text-indigo-400 transition">Pricing</a> -->
-            <a href="auth.php" class="text-white bg-indigo-600 px-5 py-2.5 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20">
-                Login / Register
-            </a>
+        <div class="flex flex-col leading-none">
+            <span class="text-lg font-black text-white tracking-tight uppercase">
+                Track<span class="text-indigo-400">it</span>
+            </span>
+            <span class="text-[8px] font-bold text-slate-500 uppercase tracking-[0.3em] mt-0.5">
+                Premium
+            </span>
         </div>
-    </nav>
+    </div>
 
+    <div class="flex items-center gap-8">
+        <a href="auth.php" class="text-white bg-indigo-600 px-5 py-2.5 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20 active:scale-95">
+            Login / Register
+        </a>
+    </div>
+</nav>
     <section class="max-w-7xl mx-auto px-8 py-20 text-center">
         
         <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">
@@ -113,7 +112,7 @@
 </section>
 
     <footer class="border-t border-slate-900 py-10 text-center text-slate-500 text-sm">
-        <p>&copy; 2026 TrackIt. All rights reserved.</p>
+        <p>&copy; 2026 TrackIt</p>
     </footer>
 
 </body>
