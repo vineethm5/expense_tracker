@@ -23,6 +23,29 @@ CREATE TABLE expenses (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
+
+CREATE TABLE income (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    amount DECIMAL(10,2),
+    source VARCHAR(100),
+    income_date DATE,
+    description TEXT
+);
+
+
+CREATE TABLE budgets (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    category VARCHAR(50),
+    amount_limit DECIMAL(10,2),
+    month_year DATE -- To track budget per month
+);
 
 --------------Vineeth
+
+
+
+
